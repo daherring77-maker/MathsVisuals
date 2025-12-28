@@ -2,7 +2,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import numpy as np
 from utils.plotting import plotly_config, apply_plotly_template, add_download_buttons, run_ollama_command
-from functools import lru_cache
+#from functools import lru_cache
 
 st.title("🌀 Lorenz Attractor")
 
@@ -144,4 +144,5 @@ if question and st.button("➤ Submit", type="primary"):
     with st.chat_message("assistant"):
         st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response}) 
+
     
