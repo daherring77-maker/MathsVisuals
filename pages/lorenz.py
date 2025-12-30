@@ -22,7 +22,7 @@ with st.expander("🎛️ Parameters", expanded=False):
     with col5:
         steps = st.slider("Steps", 500, 20_000, 10_000, step=500)
 
-@lru_cache(maxsize=16)
+#@lru_cache(maxsize=16)
 def solve_lorenz(sigma, rho, beta, dt, steps):
     x, y, z = np.zeros(steps), np.zeros(steps), np.zeros(steps)
     x[0], y[0], z[0] = 0.1, 0.0, 0.0
@@ -146,3 +146,4 @@ if question and st.button("➤ Submit", type="primary"):
     st.session_state.messages.append({"role": "assistant", "content": response}) 
 
     
+
