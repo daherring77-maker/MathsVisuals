@@ -106,7 +106,7 @@ fig.update_layout(
 )
 
 st.plotly_chart(fig, width='stretch', config=plotly_config())
-fig.write_image("lorenz_thumb.png", width=300, height=200)
+#fig.write_image("lorenz_thumb.png", width=300, height=200)
 
 # --- Export & metadata ---
 st.divider()
@@ -146,4 +146,5 @@ if question and st.button("➤ Submit", type="primary"):
     st.session_state.messages.append({"role": "assistant", "content": response}) 
 
     
+
 
